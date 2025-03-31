@@ -1,9 +1,5 @@
 package com.exercici0601;
 
-import com.utils.*;
-
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -14,20 +10,16 @@ import java.util.ResourceBundle;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.utils.UtilsViews;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.control.TextArea;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 public class ControllerCharacters implements Initializable {
     @FXML
@@ -43,7 +35,7 @@ public class ControllerCharacters implements Initializable {
             Path path = Paths.get(jsonFileURL.toURI());
             String content = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
             jsonInfo = new JSONArray(content);
-            setSeasons(null);
+            // setSeasons(null);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -62,15 +54,16 @@ public class ControllerCharacters implements Initializable {
             FXMLLoader loader = new FXMLLoader(resource);
             Parent itemTemplate = loader.load();
             ControllerCharacters itemController = loader.getController();
-            itemController.setTitle(name);
-            itemController.setImatge("/assets/images0601/" + imagen.toLowerCase() + ".png");
+            // itemController.setTitle(name);
+            // itemController.setImatge("/assets/images0601/" + imagen.toLowerCase() + ".png");
 
             lista.getChildren().add(itemTemplate);
         }
     }
 
-    private void setSeasons(Object object) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    @FXML
+    private void toViewMain(MouseEvent event) {
+        UtilsViews.setViewAnimating("ViewMain");
     }
 
 
