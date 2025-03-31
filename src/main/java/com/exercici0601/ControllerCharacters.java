@@ -31,16 +31,22 @@ public class ControllerCharacters implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
-            URL jsonFileURL = getClass().getResource("src/main/resources/assets/data/characters.json");
+            URL jsonFileURL = getClass().getResource("/assets/data/characters.json");
+            if (jsonFileURL == null) {
+                System.out.println("Error: El archivo JSON no se encuentra en la ruta especificada.");
+                return;
+            }
+    
             Path path = Paths.get(jsonFileURL.toURI());
             String content = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
+            System.out.println("Contenido del archivo JSON: " + content);
             jsonInfo = new JSONArray(content);
-            // setSeasons(null);
-
+            setCharacters(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+    
 
     @FXML
     private void setCharacters(ActionEvent event) throws Exception {
@@ -53,11 +59,11 @@ public class ControllerCharacters implements Initializable {
 
             FXMLLoader loader = new FXMLLoader(resource);
             Parent itemTemplate = loader.load();
-            ControllerCharacters itemController = loader.getController();
-            // itemController.setTitle(name);
-            // itemController.setImatge("/assets/images0601/" + imagen.toLowerCase() + ".png");
-
+            ControllerCharactersInfo itemController = loader.getController();
+            itemController.setName(name);
+            itemController.setImatge("/assets/images0601/" + imagen.toLowerCase());
             lista.getChildren().add(itemTemplate);
+            
         }
     }
 
