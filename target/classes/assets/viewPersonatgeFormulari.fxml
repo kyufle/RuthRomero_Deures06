@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 
 <AnchorPane prefHeight="93.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerCharactersInfo">
    <children>
@@ -30,5 +31,6 @@
             </VBox>
          </children>
       </HBox>
+      <Line endX="199.0" layoutX="101.0" layoutY="106.0" startX="-100.0" strokeWidth="2.0" />
    </children>
 </AnchorPane>
