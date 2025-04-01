@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.exercici0601.ControllerCharactersInfo">
+<HBox fx:id="llistarPersonatge" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.exercici0601.ControllerCharactersInfo">
     <Label fx:id="nomPersonatge" />
-    <ImageView fx:id="imatgePersonatge" />
+    <ImageView fx:id="imatgePersonatge" onMouseClicked="#clicarHbox"/>
 </HBox>

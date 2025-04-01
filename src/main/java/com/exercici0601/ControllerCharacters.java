@@ -62,6 +62,10 @@ public class ControllerCharacters implements Initializable {
             ControllerCharactersInfo itemController = loader.getController();
             itemController.setName(name);
             itemController.setImatge("/assets/images0601/" + imagen.toLowerCase());
+            itemController.setId(i);
+            // itemController.getHBox().setOnMouseClicked(hbox -> {
+            //     System.out.println("line"+itemController.getId());
+            // });
             lista.getChildren().add(itemTemplate);
             
         }
