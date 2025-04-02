@@ -25,7 +25,7 @@ public class ControllerCharacters implements Initializable {
     @FXML
     private AnchorPane container;
     @FXML
-    private VBox lista = new VBox();
+    private VBox lista;
     private JSONArray jsonInfo;
 
     @Override
@@ -50,7 +50,7 @@ public class ControllerCharacters implements Initializable {
 
     @FXML
     private void setCharacters(ActionEvent event) throws Exception {
-        URL resource = this.getClass().getResource("/assets/viewPersonatgeFormulari.fxml");
+        URL resource = this.getClass().getResource("/assets/viewCharactersInfo.fxml");
         lista.getChildren().clear();
         for (int i = 0; i < jsonInfo.length(); i++) {
             JSONObject character = jsonInfo.getJSONObject(i);
@@ -75,6 +75,11 @@ public class ControllerCharacters implements Initializable {
     private void toViewMain(MouseEvent event) {
         UtilsViews.setViewAnimating("ViewMain");
     }
+
+    // @FXML
+    //     private void clicarHbox(MouseEvent event) {
+    //     System.out.println("2");
+    // }
 
 
 }

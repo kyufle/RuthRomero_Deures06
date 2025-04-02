@@ -16,16 +16,20 @@ public class ControllerCharactersInfo {
     @FXML
     private HBox llistarPersonatge;
     private int idPersonatge;
+
     public void setName(String nomPersonatge) {
         this.nomPersonatge.setText(nomPersonatge);
     }
-    public int getId(){
+
+    public int getId() {
         return idPersonatge;
     }
-    public void setId(int idPersonatge){
+
+    public void setId(int idPersonatge) {
         this.idPersonatge = idPersonatge;
     }
-    public HBox getHBox(){
+
+    public HBox getHBox() {
         return llistarPersonatge;
     }
 
@@ -33,18 +37,14 @@ public class ControllerCharactersInfo {
         try {
             Image image = new Image(getClass().getResourceAsStream(imagePath));
             this.imatgePersonatge.setImage(image);
-            
+
         } catch (NullPointerException e) {
             System.err.println("Error loading image asset: " + imagePath);
             e.printStackTrace();
         }
     }
 
-
-    @FXML
-    private void clicarHbox(MouseEvent event) {
+    public void clicarHbox(MouseEvent event) {
         System.out.println(getId());
     }
 }
-
-
