@@ -63,9 +63,6 @@ public class ControllerCharacters implements Initializable {
             itemController.setName(name);
             itemController.setImatge("/assets/images0601/" + imagen.toLowerCase());
             itemController.setId(i);
-            // itemController.getHBox().setOnMouseClicked(hbox -> {
-            //     System.out.println("line"+itemController.getId());
-            // });
             lista.getChildren().add(itemTemplate);
             
         }
@@ -75,11 +72,4 @@ public class ControllerCharacters implements Initializable {
     private void toViewMain(MouseEvent event) {
         UtilsViews.setViewAnimating("ViewMain");
     }
-
-    // @FXML
-    //     private void clicarHbox(MouseEvent event) {
-    //     System.out.println("2");
-    // }
-
-
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="93.0" prefWidth="300.0" onMouseClicked="#clicarHbox" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerCharactersInfo">
+<AnchorPane onMouseClicked="#clicarHbox" prefHeight="93.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerCharactersInfo">
    <children>
       <HBox prefHeight="80.0" prefWidth="300.0">
          <children>
@@ -33,4 +34,7 @@
       </HBox>
       <Line endX="199.0" layoutX="101.0" layoutY="106.0" startX="-100.0" strokeWidth="2.0" />
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </AnchorPane>

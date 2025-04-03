@@ -1,10 +1,8 @@
 package com.exercici0601;
 
-import com.utils.*;
+import com.utils.UtilsViews;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -27,6 +25,7 @@ public class Main extends Application {
         UtilsViews.parentContainer.setStyle("-fx-font: 14 arial;");
         UtilsViews.addView(getClass(), "ViewMain", "/assets/viewMain.fxml");
         UtilsViews.addView(getClass(), "ViewCharacters", "/assets/viewCharacters.fxml");
+        UtilsViews.addView(getClass(), "ViewFitxa", "/assets/viewPersonatgeFitxa.fxml");
         UtilsViews.addView(getClass(), "ViewGames", "/assets/viewGames.fxml");
         UtilsViews.addView(getClass(), "ViewConsoles", "/assets/viewConsoles.fxml");
         Scene scene = new Scene(UtilsViews.parentContainer);

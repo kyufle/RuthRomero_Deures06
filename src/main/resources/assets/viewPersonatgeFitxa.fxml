@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerCharacters">
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerFitxa">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="300.0" AnchorPane.bottomAnchor="278.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -18,7 +18,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewMain" text="⬅️">
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewCharacters" text="⬅️">
                            <font>
                               <Font size="24.0" />
                            </font>

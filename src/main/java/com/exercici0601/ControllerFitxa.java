@@ -3,25 +3,19 @@ package com.exercici0601;
 import com.utils.UtilsViews;
 
 import javafx.fxml.FXML;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 
 public class ControllerFitxa {
-    @FXML 
-    private HBox characterButton;
-    @FXML 
-    private HBox gameButton;
-    @FXML 
-    private HBox consolesButton;
+    @FXML
+    private Label nomPersonatge;
+    
+    public void setNomPersonatge(String nomPersonatge){
+        this.nomPersonatge.setText(nomPersonatge);
+    }
+    @FXML
+    private void toViewCharacters(MouseEvent event) {
+        UtilsViews.setViewAnimating("ViewCharacters");
+    }
+}
 
-    public void initialize() {
-        characterButton.setOnMouseClicked(event -> {
-            UtilsViews.setViewAnimating("ViewCharacters");
-        });
-        gameButton.setOnMouseClicked(event -> {
-                UtilsViews.setViewAnimating("ViewGames");
-        });
-        consolesButton.setOnMouseClicked(event -> {
-                UtilsViews.setViewAnimating("ViewConsoles");
-        });
-}
-}
