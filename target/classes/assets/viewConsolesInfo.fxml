@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane onMouseClicked="#clicarHbox" prefHeight="93.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerCharactersInfo">
+<AnchorPane onMouseClicked="#clicarHbox" prefHeight="93.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerConsolesInfo">
    <children>
-      <HBox prefHeight="80.0" prefWidth="300.0">
+      <HBox alignment="CENTER">
          <children>
-            <VBox prefHeight="89.0" prefWidth="89.0">
+            <VBox alignment="CENTER" prefHeight="89.0" prefWidth="89.0">
                <children>
-                  <ImageView fx:id="imatgePersonatge" fitHeight="89.0" fitWidth="89.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imatgeConsola" fitHeight="89.0" fitWidth="89.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets bottom="5.0" left="20.0" right="5.0" top="9.0" />
                      </VBox.margin>
@@ -24,7 +24,7 @@
             </VBox>
             <VBox prefHeight="89.0" prefWidth="201.0">
                <children>
-                  <Label fx:id="nomPersonatge" text="Nombre personatge" textAlignment="CENTER" />
+                  <Label fx:id="nomConsola" alignment="TOP_CENTER" contentDisplay="CENTER" text="Nombre consola" textAlignment="CENTER" />
                </children>
                <padding>
                   <Insets bottom="44.0" left="20.0" right="20.0" top="44.0" />

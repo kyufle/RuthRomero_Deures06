@@ -12,7 +12,6 @@ import org.json.JSONObject;
 
 import com.utils.UtilsViews;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -39,17 +38,15 @@ public class ControllerCharacters implements Initializable {
     
             Path path = Paths.get(jsonFileURL.toURI());
             String content = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
-            System.out.println("Contenido del archivo JSON: " + content);
+            // System.out.println("Contenido del archivo JSON: " + content);
             jsonInfo = new JSONArray(content);
-            setCharacters(null);
+            setCharacters();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     
-
-    @FXML
-    private void setCharacters(ActionEvent event) throws Exception {
+    private void setCharacters() throws Exception {
         URL resource = this.getClass().getResource("/assets/viewCharactersInfo.fxml");
         lista.getChildren().clear();
         for (int i = 0; i < jsonInfo.length(); i++) {

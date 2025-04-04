@@ -43,14 +43,7 @@
             </AnchorPane>
             <ScrollPane fx:id="scrollPane" fitToWidth="true" fitToHeight="true" prefHeight="350.0" prefWidth="300.0">
                <content>
-                  <VBox fx:id="lista" spacing="10.0"/>
-                  <!-- <VBox spacing="10.0">
-                     <HBox fx:id="llistarPersonatge" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
-                     <Label fx:id="nomPersonatge" text="manolo" onMouseClicked="#clicarHbox"/>
-                     <ImageView fx:id="imatgePersonatge"/>
-                  </HBox>
-                  </VBox> -->
-                  
+                  <VBox fx:id="lista" spacing="10.0"/>                 
                </content>
             </ScrollPane>
 

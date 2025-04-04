@@ -15,9 +15,9 @@
          <children>
             <VBox prefHeight="89.0" prefWidth="89.0">
                <children>
-                  <ImageView fx:id="imatgePersonatge" fitHeight="89.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imatgePersonatge" fitHeight="89.0" fitWidth="89.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="9.0" />
+                        <Insets bottom="5.0" left="20.0" right="5.0" top="9.0" />
                      </VBox.margin>
                   </ImageView>
                </children>

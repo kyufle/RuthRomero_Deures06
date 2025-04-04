@@ -28,6 +28,7 @@ public class Main extends Application {
         UtilsViews.addView(getClass(), "ViewFitxa", "/assets/viewPersonatgeFitxa.fxml");
         UtilsViews.addView(getClass(), "ViewGames", "/assets/viewGames.fxml");
         UtilsViews.addView(getClass(), "ViewConsoles", "/assets/viewConsoles.fxml");
+        UtilsViews.addView(getClass(), "ViewConsolesFitxa", "/assets/viewConsolaFitxa.fxml");
         Scene scene = new Scene(UtilsViews.parentContainer);
 
         stage.setScene(scene);

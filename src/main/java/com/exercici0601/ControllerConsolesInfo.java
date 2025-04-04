@@ -20,20 +20,20 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
-public class ControllerCharactersInfo implements Initializable{
+public class ControllerConsolesInfo implements Initializable{
     @FXML
-    private Label nomPersonatge;
+    private Label nomConsola;
     @FXML
-    private ImageView imatgePersonatge;
+    private ImageView imatgeConsola;
     @FXML
-    private HBox llistarPersonatge;
-    private int idPersonatge;
+    private HBox llistarConsoles;
+    private int idConsola;
     private JSONArray jsonInfo;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
-            URL jsonFileURL = getClass().getResource("/assets/data/characters.json");
+            URL jsonFileURL = getClass().getResource("/assets/data/consoles.json");
             if (jsonFileURL == null) {
                 System.out.println("Error: El archivo JSON no se encuentra en la ruta especificada.");
                 return;
@@ -48,26 +48,26 @@ public class ControllerCharactersInfo implements Initializable{
         }
     }
 
-    public void setName(String nomPersonatge) {
-        this.nomPersonatge.setText(nomPersonatge);
+    public void setName(String nomConsola) {
+        this.nomConsola.setText(nomConsola);
     }
 
     public int getId() {
-        return idPersonatge;
+        return idConsola;
     }
 
-    public void setId(int idPersonatge) {
-        this.idPersonatge = idPersonatge;
+    public void setId(int idConsola) {
+        this.idConsola = idConsola;
     }
 
     public HBox getHBox() {
-        return llistarPersonatge;
+        return llistarConsoles;
     }
 
     public void setImatge(String imagePath) {
         try {
             Image image = new Image(getClass().getResourceAsStream(imagePath));
-            this.imatgePersonatge.setImage(image);
+            this.imatgeConsola.setImage(image);
 
         } catch (NullPointerException e) {
             System.err.println("Error loading image asset: " + imagePath);
@@ -78,14 +78,16 @@ public class ControllerCharactersInfo implements Initializable{
     public void clicarHbox(MouseEvent event) {
         for (int i = 0; i < jsonInfo.length(); i++) {
             if (i==getId()) {
-                JSONObject character = jsonInfo.getJSONObject(i);
-                ControllerFitxa crtl = (ControllerFitxa) UtilsViews.getController("ViewFitxa");
-                crtl.setTitolNombrePersonatge(character.getString("name"));
-                crtl.setImatgePersonatge("/assets/images0601/"+character.getString("image"));
-                crtl.setNomPersonatge(character.getString("name"));
-                crtl.setColorPersonatge(character.getString("color"));
-                crtl.setJocPersonatge(character.getString("game"));
-                UtilsViews.setViewAnimating("ViewFitxa");
+                JSONObject consoles = jsonInfo.getJSONObject(i);
+                ControllerFitxaConsola crtl = (ControllerFitxaConsola) UtilsViews.getController("ViewConsolesFitxa");
+                crtl.setTitolNombreConsola(consoles.getString("name"));
+                crtl.setImatgeConsola("/assets/images0601/"+consoles.getString("image"));
+                crtl.setNomConsola(consoles.getString("name"));
+                crtl.setDataConsola(consoles.getString("date"));
+                crtl.setProcesadorConsola(consoles.getString("procesador"));
+                crtl.setUnitatVenudes(consoles.getInt("units_sold"));
+                crtl.setColorConsola(consoles.getString("color"));
+                UtilsViews.setViewAnimating("ViewConsolesFitxa");
             }   
         }
     }
