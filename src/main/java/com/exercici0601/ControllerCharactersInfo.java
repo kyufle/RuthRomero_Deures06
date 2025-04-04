@@ -77,11 +77,8 @@ public class ControllerCharactersInfo implements Initializable{
     }
 
     public void clicarHbox(MouseEvent event) {
-        //for para poder coger el id, verificar que es el mismo que getid
-        //setear todas las variables
         for (int i = 0; i < jsonInfo.length(); i++) {
             if (i==getId()) {
-                System.out.println(jsonInfo.length());
                 JSONObject character = jsonInfo.getJSONObject(i);
                 ControllerFitxa crtl = (ControllerFitxa) UtilsViews.getController("ViewFitxa");
                 crtl.setTitolNombrePersonatge(character.getString("name"));
