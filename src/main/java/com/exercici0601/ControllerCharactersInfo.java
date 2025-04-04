@@ -77,7 +77,6 @@ public class ControllerCharactersInfo implements Initializable{
     }
 
     public void clicarHbox(MouseEvent event) {
-        
         //for para poder coger el id, verificar que es el mismo que getid
         //setear todas las variables
         for (int i = 0; i < jsonInfo.length(); i++) {
@@ -85,7 +84,11 @@ public class ControllerCharactersInfo implements Initializable{
                 System.out.println(jsonInfo.length());
                 JSONObject character = jsonInfo.getJSONObject(i);
                 ControllerFitxa crtl = (ControllerFitxa) UtilsViews.getController("ViewFitxa");
-                crtl.setNomPersonatge(character.getString("nom"));
+                crtl.setTitolNombrePersonatge(character.getString("name"));
+                crtl.setImatgePersonatge("/assets/images0601/"+character.getString("image"));
+                crtl.setNomPersonatge(character.getString("name"));
+                crtl.setColorPersonatge(character.getString("color"));
+                crtl.setJocPersonatge(character.getString("game"));
                 UtilsViews.setViewAnimating("ViewFitxa");
             }
             
