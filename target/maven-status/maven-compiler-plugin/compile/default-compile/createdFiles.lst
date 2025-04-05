@@ -5,8 +5,10 @@ com/exercici0601/ControllerGames.class
 com/exercici0601/ControllerFitxaConsola.class
 com/exercici0600/ControllerFitxa.class
 com/exercici0601/ControllerCharacters.class
+com/exercici0601/ControllerGamesInfo.class
 com/exercici0600/Main.class
 com/utils/UtilsViews.class
+com/exercici0601/ControllerFitxaGame.class
 com/exercici0601/ControllerCharactersInfo.class
 com/exercici0601/Main.class
 com/exercici0600/ControllerFormulari.class

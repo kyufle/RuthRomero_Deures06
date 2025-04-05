@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerFitxaGame">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="302.0" AnchorPane.bottomAnchor="333.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="66.0" prefHeight="64.0" prefWidth="302.0" style="-fx-background-color: rgb(150,190,250);" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" text="⬅️">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="titolNombreGames" maxHeight="50.0" prefHeight="50.0" prefWidth="248.0" text="Consola">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutY="67.0" prefHeight="227.0" prefWidth="302.0">
+         <children>
+            <ImageView fx:id="imatgeGame" fitHeight="227.0" fitWidth="303.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="-2.0" layoutY="248.0" prefHeight="150.0" prefWidth="304.0">
+         <children>
+            <Label fx:id="nomGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Nom joc" />
+            <Label fx:id="plotGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Plot joc" />
+            <Label fx:id="typeGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Tipus de joc" />
+            <Rectangle fx:id="colorGame" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+            <Label fx:id="yearGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Any sortida joc" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
