@@ -3,66 +3,141 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exercici0601.ControllerFitxaGame">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="302.0" AnchorPane.bottomAnchor="333.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane maxHeight="66.0" prefHeight="64.0" prefWidth="302.0" style="-fx-background-color: rgb(150,190,250);" VBox.vgrow="ALWAYS">
+      <ScrollPane>
+         <content>
+            <VBox prefHeight="400.0" prefWidth="306.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="302.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" text="⬅️">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
+                        <AnchorPane maxHeight="66.0" prefHeight="64.0" prefWidth="302.0" style="-fx-background-color: rgb(150,190,250);" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" text="⬅️">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <Text fx:id="titolNombreGames" strokeType="OUTSIDE" strokeWidth="0.0" text="Joc" wrappingWidth="240.59200286865234">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+            
+                                                   </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="227.0" prefWidth="302.0">
+                     <children>
+                        <ImageView fx:id="imatgeGame" fitHeight="170.0" fitWidth="303.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="206.0">
+                     <children>
+                        <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="99.0" text="Nom:">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
                            <padding>
                               <Insets left="20.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="titolNombreGames" maxHeight="50.0" prefHeight="50.0" prefWidth="248.0" text="Consola">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
+                        <Label fx:id="nomGame" contentDisplay="CENTER" prefHeight="18.0" prefWidth="226.0" text="Nom joc">
                            <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                              <Insets />
                            </HBox.margin>
                            <padding>
-                              <Insets left="25.0" />
+                              <Insets right="20.0" />
                            </padding>
                         </Label>
                      </children>
                   </HBox>
+                  <HBox prefHeight="18.0" prefWidth="287.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="49.0" text="Plot:" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Text fx:id="plotGame" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot joc" wrappingWidth="184.0">
+                           <HBox.margin>
+                              <Insets left="90.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="124.0" text="Tipus:">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="typeGame" contentDisplay="CENTER" prefHeight="18.0" prefWidth="270.0" text="Tipus de joc">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="35.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="18.0" prefWidth="62.0" text="Any:">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="yearGame" contentDisplay="CENTER" prefHeight="18.0" prefWidth="253.0" text="Any sortida joc">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </HBox>
                </children>
-            </AnchorPane>
-
-         </children>
-      </VBox>
-      <HBox alignment="CENTER" layoutY="67.0" prefHeight="227.0" prefWidth="302.0">
-         <children>
-            <ImageView fx:id="imatgeGame" fitHeight="227.0" fitWidth="303.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </HBox>
-      <VBox alignment="CENTER" layoutX="-2.0" layoutY="248.0" prefHeight="150.0" prefWidth="304.0">
-         <children>
-            <Label fx:id="nomGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Nom joc" />
-            <Label fx:id="plotGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Plot joc" />
-            <Label fx:id="typeGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Tipus de joc" />
-            <Rectangle fx:id="colorGame" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
-            <Label fx:id="yearGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Any sortida joc" />
-         </children>
-      </VBox>
+            </VBox>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

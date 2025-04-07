@@ -77,9 +77,7 @@ public class ControllerGamesInfo implements Initializable{
 
     public void clicarHbox(MouseEvent event) {
         for (int i = 0; i < jsonInfo.length(); i++) {
-            System.out.println("1");
             if (i==getId()) {
-                System.out.println("2");
                 JSONObject games = jsonInfo.getJSONObject(i);
                 ControllerFitxaGame crtl = (ControllerFitxaGame) UtilsViews.getController("ViewGamesFitxa");
                 crtl.setTitolNombreGame(games.getString("name"));
@@ -91,6 +89,5 @@ public class ControllerGamesInfo implements Initializable{
                 UtilsViews.setViewAnimating("ViewGamesFitxa");
             }   
         }
-        System.out.println("3");
     }
 }

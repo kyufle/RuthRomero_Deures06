@@ -54,12 +54,42 @@
          <children>
             <ImageView fx:id="imatgePersonatge" fitHeight="227.0" fitWidth="303.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
          </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
       </HBox>
-      <VBox alignment="CENTER" layoutX="-2.0" layoutY="248.0" prefHeight="150.0" prefWidth="304.0">
+      <VBox alignment="CENTER" layoutX="-2.0" layoutY="248.0" prefHeight="150.0" prefWidth="313.0">
          <children>
-            <Label fx:id="nomPersonatge" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Nom personatge" />
-            <Rectangle fx:id="colorPersonatge" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
-            <Label fx:id="jocPersonatge" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="279.0" text="Joc" />
+            <HBox alignment="CENTER" prefHeight="18.0" prefWidth="216.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="39.0" text="Nom:" />
+                  <Label fx:id="nomPersonatge" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="129.0" text="Nom personatge" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="69.0" text="Color:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Rectangle fx:id="colorPersonatge" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" stroke="BLACK" strokeType="INSIDE" width="101.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Rectangle>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="34.0" text="Joc:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="jocPersonatge" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="129.0" text="Joc" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

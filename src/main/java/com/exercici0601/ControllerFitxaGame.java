@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
 public class ControllerFitxaGame {
     @FXML
@@ -17,11 +18,11 @@ public class ControllerFitxaGame {
     @FXML
     private Rectangle colorGame;
     @FXML
-    private Label plotGame;
+    private Text plotGame;
     @FXML
     private ImageView imatgeGame;
     @FXML
-    private Label titolNombreGames;
+    private Text titolNombreGames;
     @FXML
     private Label typeGame;
     @FXML
