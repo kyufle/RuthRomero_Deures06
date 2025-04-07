@@ -17,13 +17,13 @@
          <content>
             <VBox prefHeight="400.0" prefWidth="306.0">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="302.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="65.0" prefWidth="298.0">
                      <children>
-                        <AnchorPane maxHeight="66.0" prefHeight="64.0" prefWidth="302.0" style="-fx-background-color: rgb(230, 0, 18);" VBox.vgrow="ALWAYS">
+                        <AnchorPane style="-fx-background-color: rgb(230, 0, 18);" VBox.vgrow="NEVER">
                            <children>
-                              <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="308.0" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" text="⬅️" textFill="WHITE">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" prefHeight="50.0" prefWidth="55.0" text="⬅️" textFill="WHITE">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
@@ -37,12 +37,12 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <Text fx:id="titolNombreGames" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Joc" wrappingWidth="240.59200286865234">
+                                    <Text fx:id="titolNombreGames" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Joc" wrappingWidth="209.59200286865234">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
                                        <HBox.margin>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
                                        </HBox.margin>
                                     </Text>
                                  </children>

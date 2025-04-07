@@ -43,7 +43,7 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="350.0" prefWidth="300.0">
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="350.0" prefWidth="300.0">
                <content>
                   <VBox fx:id="lista" spacing="10.0" />                 
                </content>
