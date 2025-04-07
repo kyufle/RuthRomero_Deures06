@@ -19,11 +19,11 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="302.0">
                      <children>
-                        <AnchorPane maxHeight="66.0" prefHeight="64.0" prefWidth="302.0" style="-fx-background-color: rgb(150,190,250);" VBox.vgrow="ALWAYS">
+                        <AnchorPane maxHeight="66.0" prefHeight="64.0" prefWidth="302.0" style="-fx-background-color: rgb(230, 0, 18);" VBox.vgrow="ALWAYS">
                            <children>
                               <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" text="⬅️">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" onMouseClicked="#toViewGames" text="⬅️" textFill="WHITE">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
@@ -37,7 +37,7 @@
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <Text fx:id="titolNombreGames" strokeType="OUTSIDE" strokeWidth="0.0" text="Joc" wrappingWidth="240.59200286865234">
+                                    <Text fx:id="titolNombreGames" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Joc" wrappingWidth="240.59200286865234">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
